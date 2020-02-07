@@ -24,16 +24,158 @@ const useStyles = makeStyles(() => ({
     textTransform: 'none',
     padding: 0,
   },
-  testing: {
+
+
+
+
+ 
+  priorityCardHeader: {
+    textAlign: 'center',
+    padding: 7,
+    color: 'white',
+    background: 'purple'
+  },
+  priorityCardBackground: {
+    background: 'plum' 
+  },
+
+
+  healthCardHeader: {
+    textAlign: 'center',
+    padding: 7,
+    color: 'white',
+    background: 'indigo'
+  },
+  healthCardBackground: {
+    background: 'darkslateblue' 
+  },
+
+
+  workCardHeader: {
+    textAlign: 'center',
+    padding: 7,
+    color: 'white',
+    background: 'Blue'
+  },
+  workCardBackground: {
+    background: 'azure' 
+  },
+
+
+  relationshipsCardHeader: {
+    textAlign: 'center',
+    padding: 7,
+    color: 'white',
+    background: 'green'
+  },
+  relationshipsCardBackground: {
+    background: 'lightgreen' 
+  },
+
+
+  networkingCardHeader: {
+    textAlign: 'center',
+    padding: 7,
+    color: 'black',
+    background: 'yellow'
+  },
+  networkingCardBackground: {
+    background: 'khaki' 
+  },
+
+
+  projectsCardHeader: {
+    textAlign: 'center',
+    padding: 7,
+    color: 'white',
+    background: 'red'
+  }, 
+  projectsCardBackground: {
+    background: 'lightpink' 
+  },
+
+  choresCardHeader: {
+    textAlign: 'center',
+    padding: 7,
+    color: 'white',
+    background: 'grey'
+  },  
+  choresCardBackground: {
+    background: 'lightgrey' 
+  },
+
+
+/*
+
+  priorityCardHeader: {
+    textAlign: 'center',
+    padding: 7,
+    color: 'white',
+    background: 'red'
+  },
+  priorityCardBackground: {
+    background: 'lightpink' 
+  },
+
+
+  healthCardHeader: {
+    textAlign: 'center',
+    padding: 7,
+    color: 'white',
+    background: 'orange'
+  },
+  healthCardBackground: {
+    background: 'plum' 
+  },
+
+
+  workCardHeader: {
     textAlign: 'center',
     padding: 7,
     color: 'red',
     background: 'yellow'
   },
-  testing_2: {
-    background: 'lightgrey'
-    
+  workCardBackground: {
+    background: 'lightgrey' 
+  },
+
+
+  relationshipsCardHeader: {
+    textAlign: 'center',
+    padding: 7,
+    color: 'black',
+    background: 'yellow'
+  },
+  relationshipsCardBackground: {
+    background: 'lightgrey' 
+  },
+
+
+  networkingCardHeader: {
+    textAlign: 'center',
+    padding: 7,
+    color: 'red',
+    background: 'yellow'
+  },
+  networkingCardBackground: {
+    background: 'lightgrey' 
+  },
+  projectsCardHeader: {
+    textAlign: 'center',
+    padding: 7,
+    color: 'red',
+    background: 'yellow'
+  },
+
+  choresCardHeader: {
+    textAlign: 'center',
+    padding: 7,
+    color: 'red',
+    background: 'yellow'
   }
+
+*/
+
 }));
 
 const Semester = (props) => {
@@ -45,7 +187,14 @@ console.log(props);
       className={classes.root}
     >
         <CardHeader
-            className={(semesterName === 'Health')? classes.testing : classes.cardHeaderStyle}
+            className={(semesterName === "Day's Priority") ? classes.priorityCardHeader : 
+                          (semesterName === 'Health') ? classes.healthCardHeader :
+                          (semesterName === 'Work') ? classes.workCardHeader :
+                          (semesterName === 'Relationships') ? classes.relationshipsCardHeader :
+                          (semesterName === 'Networking') ? classes.networkingCardHeader :
+                          (semesterName === 'Chores') ? classes.choresCardHeader :
+                          (semesterName === 'Projects') ? classes.projectsCardHeader : classes.cardHeaderStyle }
+
             title={semesterName}
             titleTypographyProps={{ variant: 'h6' }}
             
@@ -55,8 +204,15 @@ console.log(props);
         <Droppable droppableId={semesterId} type={`droppableSemester`}>
             {provided => (
                 <RootRef rootRef={provided.innerRef}>
-                    <CardContent className={(semesterName === "Day's Priority")? classes.testing_2: ''}>
-                        {courses.map((course, index) => (
+                    <CardContent className={(semesterName === "Day's Priority")? classes.priorityCardBackground : 
+                    (semesterName === 'Health') ? classes.healthCardBackground:
+                    (semesterName === 'Work') ? classes.workCardBackground :
+                    (semesterName === 'Relationships') ? classes.relationshipsCardBackground :
+                    (semesterName === 'Networking') ? classes.networkingCardBackground :
+                    (semesterName === 'Chores') ? classes.choresCardBackground :
+                    (semesterName === 'Projects') ? classes.projectsCardBackground : '' }>
+
+                       {courses.map((course, index) => (
                             <Draggable key={course.id} draggableId={course.id} index={index}>
                                 {provided => (
                                     <div
