@@ -36,7 +36,7 @@ export default [
       },
       {
         id: "11",
-        semesterName: "Chores",
+        semesterName: "Projects",
         courses: []
       }
     ]
@@ -47,7 +47,7 @@ export default [
     semesters: [
       {
         id: "5",
-        semesterName: "Projects",
+        semesterName: "Chores",
         courses: []
       },
       {

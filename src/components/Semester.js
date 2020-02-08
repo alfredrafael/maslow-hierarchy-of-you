@@ -47,7 +47,7 @@ const useStyles = makeStyles(() => ({
     background: 'indigo'
   },
   healthCardBackground: {
-    background: 'darkslateblue' 
+    background: '#9500ff' 
   },
 
 
@@ -58,7 +58,7 @@ const useStyles = makeStyles(() => ({
     background: 'Blue'
   },
   workCardBackground: {
-    background: 'azure' 
+    background: 'lightskyblue' 
   },
 
 
@@ -80,7 +80,7 @@ const useStyles = makeStyles(() => ({
     background: 'yellow'
   },
   networkingCardBackground: {
-    background: 'khaki' 
+    background: 'lemonchiffon' 
   },
 
 
@@ -88,20 +88,20 @@ const useStyles = makeStyles(() => ({
     textAlign: 'center',
     padding: 7,
     color: 'white',
-    background: 'red'
+    background: 'orange'
   }, 
   projectsCardBackground: {
-    background: 'lightpink' 
+    background: 'moccasin' 
   },
 
   choresCardHeader: {
     textAlign: 'center',
     padding: 7,
     color: 'white',
-    background: 'grey'
+    background: 'red'
   },  
   choresCardBackground: {
-    background: 'lightgrey' 
+    background: 'lightpink' 
   },
 
 

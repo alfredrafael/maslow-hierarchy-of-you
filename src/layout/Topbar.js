@@ -5,8 +5,8 @@ import MenuIcon from "@material-ui/icons/Menu";
 const useStyles = makeStyles(theme => ({
   root: {
     zIndex: theme.zIndex.drawer + 1,
-    backgroundColor: 'lightskyblue',
-    color: '#040182'
+    backgroundColor: '#040182',
+    color: 'white'
   },
   menuIcon: {
     marginRight: theme.spacing(1),
