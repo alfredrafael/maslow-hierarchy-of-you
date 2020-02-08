@@ -33,7 +33,11 @@ const useStyles = makeStyles(() => ({
     textAlign: 'center',
     padding: 7,
     color: 'white',
-    background: 'purple'
+    background: 'purple',
+    '&::after': {
+      content: '"some content"',
+      
+    }
   },
   priorityCardBackground: {
     background: 'plum' 
@@ -99,14 +103,13 @@ const useStyles = makeStyles(() => ({
     padding: 7,
     color: 'white',
     background: 'red'
-  },  
+  },
   choresCardBackground: {
     background: 'lightpink' 
   },
 
 
 /*
-
   priorityCardHeader: {
     textAlign: 'center',
     padding: 7,
@@ -173,8 +176,8 @@ const useStyles = makeStyles(() => ({
     color: 'red',
     background: 'yellow'
   }
-
 */
+
 
 }));
 
