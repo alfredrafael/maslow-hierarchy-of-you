@@ -1,7 +1,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/styles';
 import {
-  Card,
+//  Card,
   CardHeader,
   CardContent,
   CardActions,
@@ -11,6 +11,15 @@ import {
 import Course from './Course';
 import { Draggable, Droppable } from "react-beautiful-dnd";
 import AddCourseButton from '../views/components/AddCourseButton';
+import Card from 'react-bootstrap/Card'
+import styled from 'styled-components'
+
+
+
+const MyTest = styled.div`
+  color: red;
+  background: blue;
+`
 
 const useStyles = makeStyles(() => ({
   root: {
@@ -26,8 +35,6 @@ const useStyles = makeStyles(() => ({
   },
 
 
-
-
  
   priorityCardHeader: {
     textAlign: 'center',
@@ -36,7 +43,9 @@ const useStyles = makeStyles(() => ({
     background: 'purple',
     '&::after': {
       content: '"some content"',
-      
+      display: 'block',
+      height: 60,
+      marginTop: -60
     }
   },
   priorityCardBackground: {
@@ -229,6 +238,7 @@ console.log(props);
                                             semesterIndex={semesterIndex}
                                             courseIndex={index}
                                         />
+                                        <MyTest>Hello</MyTest>
                                     </div>
                                 )}
                             </Draggable>
@@ -243,10 +253,12 @@ console.log(props);
         <Divider />
 
         <CardActions>
+        <Card.Footer>
             <AddCourseButton
               yearIndex={yearIndex}
               semesterIndex={semesterIndex}
             />
+            </Card.Footer>
         </CardActions>
 
     </Card>
