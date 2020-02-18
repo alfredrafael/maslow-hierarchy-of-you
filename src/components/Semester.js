@@ -167,7 +167,7 @@ const useStyles = makeStyles(() => ({
 const Semester = (props) => {
   const { semesterName, courses, semesterId, yearIndex, semesterIndex } = props;
   const classes = useStyles();
-console.log(props);
+//console.log('props.semesterName');
   return (
     <Card
       className={classes.root}

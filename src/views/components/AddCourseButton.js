@@ -16,8 +16,8 @@ const CustomButton = styled.button`
   font-family: inherit;
   font-size: 12px;
   font-weight: 700;
-  color: white;
-  background-color: purple;
+  color: purple;
+  background-color: azure;
   border-radius: 5px;
   box-shadow: 0 10px 10px rgba(0, 0, 0, .08);
   cursor: pointer;

@@ -12,7 +12,7 @@ const useStyles = makeStyles(() => ({
     padding: '3px',
     cursor: 'pointer'
   },
-  highlightCourseName: {
+  highlightCourseName: { //before the task item
     color: '#00863f',
     fontWeight: 700,
     display: 'inline',
@@ -26,6 +26,8 @@ const useStyles = makeStyles(() => ({
     //   opacity: 0.9,
     // },
     marginRight: 17,
+    marginTop: 7,
+    marginLeft: 5,
   },
   // hideDelete: {
   //   display: 'none',
@@ -93,8 +95,8 @@ const Course = (props) => {
           
           action={
             <>
-              <div className={state.isHovering ? classes.showDelete : classes.hideDelete} onClick={handleDelete}>
-                <DeleteSharpIcon fontSize={'small'} style={{marginTop: '43%'}}/>
+              <div className={classes.showDelete} onClick={handleDelete}>
+                <DeleteSharpIcon fontSize={'small'} style={{}}/>
               </div>
             </>
           }
