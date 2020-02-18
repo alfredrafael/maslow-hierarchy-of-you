@@ -23,7 +23,7 @@ const MyTest = styled.div`
 
 const useStyles = makeStyles(() => ({
   root: {
-    width: '350px',
+    width: '300px',
   },
   cardHeaderStyle: {
     textAlign: 'center',
@@ -209,8 +209,8 @@ console.log(props);
 
             title={semesterName}
             titleTypographyProps={{ variant: 'h6' }}
-            
         />
+
         <Divider />
 
         <Droppable droppableId={semesterId} type={`droppableSemester`}>
@@ -238,7 +238,7 @@ console.log(props);
                                             semesterIndex={semesterIndex}
                                             courseIndex={index}
                                         />
-                                        <MyTest>Hello</MyTest>
+                                        <MyTest></MyTest>
                                     </div>
                                 )}
                             </Draggable>

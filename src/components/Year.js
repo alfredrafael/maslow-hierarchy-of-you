@@ -1,7 +1,7 @@
 import React from "react";
 import { makeStyles } from '@material-ui/core/styles';
 import Semester from './Semester';
-import { Button } from 'react-bootstrap';
+import { Button, Row, Col} from 'react-bootstrap';
 
 
 // const useStyles = makeStyles(() => ({
@@ -21,9 +21,10 @@ const Year = (props) => {
   const { semesters, yearIndex } = props;
 
   return (
-    <div style={{display: 'flex'}}>
+    <Row>
       {semesters.map((semester, index) => (
         <div key={semester.id}>
+        <Col>
           <Semester
             semesterName={semester.semesterName}
             courses={semester.courses}
@@ -31,9 +32,10 @@ const Year = (props) => {
             yearIndex={yearIndex}
             semesterIndex={index}
           />
+          </Col>
         </div>
       ))}
-    </div>
+    </Row>
   );
 }
 
