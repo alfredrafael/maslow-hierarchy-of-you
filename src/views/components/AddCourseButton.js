@@ -1,15 +1,17 @@
 import React, { useState } from 'react';
 import { makeStyles } from '@material-ui/styles';
 import {
-  Button, Card, Icon
+  Card, Icon
 } from '@material-ui/core';
 import TextArea from "react-textarea-autosize";
 import { connect } from 'react-redux';
 import { addCourse } from "../../actions/courseActions";
+import { Button } from 'react-bootstrap';
 
 const useStyles = makeStyles(() => ({
   root: {
-    textTransform: 'none', padding: 0,
+    textTransform: 'none', 
+    padding: 0,
   },
   addCourseForm: {
     textTransform: 'none',
@@ -96,7 +98,7 @@ const AddCourseButton = (props) => {
   const renderButton = () => {
     return (
       <Button className={classes.root} onClick={handleOpenForm}>
-        <Icon>add</Icon>Add item
+        <Icon>add</Icon>
       </Button>
     );
   };
