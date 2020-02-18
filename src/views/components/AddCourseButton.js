@@ -7,11 +7,34 @@ import TextArea from "react-textarea-autosize";
 import { connect } from 'react-redux';
 import { addCourse } from "../../actions/courseActions";
 import { Button } from 'react-bootstrap';
+import styled from 'styled-components';
+
+
+const CustomButton = styled.button`
+  display: block;
+  width: 30%;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 700;
+  color: white;
+  background-color: purple;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, .08);
+  cursor: pointer;
+  margin-right: -4%;
+
+ 
+  }
+`
 
 const useStyles = makeStyles(() => ({
   root: {
     textTransform: 'none', 
     padding: 0,
+  },
+  test: {
+    background: 'black',
+    display: 'none'
   },
   addCourseForm: {
     textTransform: 'none',
@@ -97,9 +120,9 @@ const AddCourseButton = (props) => {
 
   const renderButton = () => {
     return (
-      <Button className={classes.root} onClick={handleOpenForm}>
-        <Icon>add</Icon>
-      </Button>
+      <CustomButton className={classes.root} onClick={handleOpenForm} style={{float: 'right'}}>
+        <span style={{fontSize: '169%', fontWeight: 'bold'}}>&nbsp; + &nbsp;</span>
+      </CustomButton>
     );
   };
 

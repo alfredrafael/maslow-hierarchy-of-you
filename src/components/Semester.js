@@ -24,6 +24,11 @@ const MyTest = styled.div`
 const useStyles = makeStyles(() => ({
   root: {
     width: '300px',
+    transition: 'all .25s cubic-bezier(.02, .01, .47, 1)',
+    // '&:hover': {
+    //   boxShadow: '0 15px 15px rgba(0, 0, 0, .16)',
+    //   transform: 'translate(0, -5px)',
+    // }
   },
   cardHeaderStyle: {
     textAlign: 'center',
@@ -33,8 +38,6 @@ const useStyles = makeStyles(() => ({
     textTransform: 'none',
     padding: 0,
   },
-
-
  
   priorityCardHeader: {
     textAlign: 'center',
@@ -130,6 +133,17 @@ const useStyles = makeStyles(() => ({
   choresCardBackground: {
     background: 'lightpink' 
   },
+  otherCardHeader: {
+    textAlign: 'center',
+    padding: 7,
+    color: 'black',
+    background: 'grey',
+    borderTopLeftRadius: '5px',
+    borderTopRightRadius: '5px',
+  },
+  otherCardBackground: {
+    background: 'darkgrey' 
+  },
 
 
 }));
@@ -149,7 +163,8 @@ console.log(props);
                           (semesterName === 'Relationships') ? classes.relationshipsCardHeader :
                           (semesterName === 'Networking') ? classes.networkingCardHeader :
                           (semesterName === 'Chores') ? classes.choresCardHeader :
-                          (semesterName === 'Projects') ? classes.projectsCardHeader : classes.cardHeaderStyle }
+                          (semesterName === 'Projects') ? classes.projectsCardHeader :
+                          (semesterName === 'Other') ? classes.otherCardHeader : classes.cardHeaderStyle }
 
             title={semesterName}
             titleTypographyProps={{ variant: 'h6' }}
@@ -166,7 +181,8 @@ console.log(props);
                     (semesterName === 'Relationships') ? classes.relationshipsCardBackground :
                     (semesterName === 'Networking') ? classes.networkingCardBackground :
                     (semesterName === 'Chores') ? classes.choresCardBackground :
-                    (semesterName === 'Projects') ? classes.projectsCardBackground : '' }>
+                    (semesterName === 'Projects') ? classes.projectsCardBackground :
+                    (semesterName === 'Other') ? classes.otherCardBackground : '' }>
 
                        {courses.map((course, index) => (
                             <Draggable key={course.id} draggableId={course.id} index={index}>
@@ -196,14 +212,14 @@ console.log(props);
     
         <Divider />
 
-        <CardActions>
-        <Card.Footer>
+      
+        <Card.Footer style={{alignItems: 'right'}}>
             <AddCourseButton
               yearIndex={yearIndex}
               semesterIndex={semesterIndex}
             />
             </Card.Footer>
-        </CardActions>
+        
 
     </Card>
   );
