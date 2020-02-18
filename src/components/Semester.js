@@ -41,12 +41,14 @@ const useStyles = makeStyles(() => ({
     padding: 7,
     color: 'white',
     background: 'purple',
-    '&::after': {
-      content: '"some content"',
-      display: 'block',
-      height: 60,
-      marginTop: -60
-    }
+    // '&::after': {
+    //   content: '"some content"',
+    //   display: 'block',
+    //   height: 60,
+    //   marginTop: -60
+    // }
+    borderTopLeftRadius: '5px',
+    borderTopRightRadius: '5px',
   },
   priorityCardBackground: {
     background: 'plum' 
@@ -57,10 +59,12 @@ const useStyles = makeStyles(() => ({
     textAlign: 'center',
     padding: 7,
     color: 'white',
-    background: 'indigo'
+    background: 'indigo',
+    borderTopLeftRadius: '5px',
+    borderTopRightRadius: '5px',
   },
   healthCardBackground: {
-    background: '#9500ff' 
+    background: '#9500ff', 
   },
 
 
@@ -68,7 +72,9 @@ const useStyles = makeStyles(() => ({
     textAlign: 'center',
     padding: 7,
     color: 'white',
-    background: 'Blue'
+    background: 'Blue',
+    borderTopLeftRadius: '5px',
+    borderTopRightRadius: '5px',
   },
   workCardBackground: {
     background: 'lightskyblue' 
@@ -79,7 +85,9 @@ const useStyles = makeStyles(() => ({
     textAlign: 'center',
     padding: 7,
     color: 'white',
-    background: 'green'
+    background: 'green',
+    borderTopLeftRadius: '5px',
+    borderTopRightRadius: '5px',
   },
   relationshipsCardBackground: {
     background: 'lightgreen' 
@@ -90,7 +98,9 @@ const useStyles = makeStyles(() => ({
     textAlign: 'center',
     padding: 7,
     color: 'black',
-    background: 'yellow'
+    background: 'yellow',
+    borderTopLeftRadius: '5px',
+    borderTopRightRadius: '5px',
   },
   networkingCardBackground: {
     background: 'lemonchiffon' 
@@ -100,8 +110,10 @@ const useStyles = makeStyles(() => ({
   projectsCardHeader: {
     textAlign: 'center',
     padding: 7,
-    color: 'white',
-    background: 'orange'
+    color: 'black',
+    background: 'orange',
+    borderTopLeftRadius: '5px',
+    borderTopRightRadius: '5px',
   }, 
   projectsCardBackground: {
     background: 'moccasin' 
@@ -110,82 +122,14 @@ const useStyles = makeStyles(() => ({
   choresCardHeader: {
     textAlign: 'center',
     padding: 7,
-    color: 'white',
-    background: 'red'
+    color: 'black',
+    background: 'red',
+    borderTopLeftRadius: '5px',
+    borderTopRightRadius: '5px',
   },
   choresCardBackground: {
     background: 'lightpink' 
   },
-
-
-/*
-  priorityCardHeader: {
-    textAlign: 'center',
-    padding: 7,
-    color: 'white',
-    background: 'red'
-  },
-  priorityCardBackground: {
-    background: 'lightpink' 
-  },
-
-
-  healthCardHeader: {
-    textAlign: 'center',
-    padding: 7,
-    color: 'white',
-    background: 'orange'
-  },
-  healthCardBackground: {
-    background: 'plum' 
-  },
-
-
-  workCardHeader: {
-    textAlign: 'center',
-    padding: 7,
-    color: 'red',
-    background: 'yellow'
-  },
-  workCardBackground: {
-    background: 'lightgrey' 
-  },
-
-
-  relationshipsCardHeader: {
-    textAlign: 'center',
-    padding: 7,
-    color: 'black',
-    background: 'yellow'
-  },
-  relationshipsCardBackground: {
-    background: 'lightgrey' 
-  },
-
-
-  networkingCardHeader: {
-    textAlign: 'center',
-    padding: 7,
-    color: 'red',
-    background: 'yellow'
-  },
-  networkingCardBackground: {
-    background: 'lightgrey' 
-  },
-  projectsCardHeader: {
-    textAlign: 'center',
-    padding: 7,
-    color: 'red',
-    background: 'yellow'
-  },
-
-  choresCardHeader: {
-    textAlign: 'center',
-    padding: 7,
-    color: 'red',
-    background: 'yellow'
-  }
-*/
 
 
 }));

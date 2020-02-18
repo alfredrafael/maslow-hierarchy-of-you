@@ -11,7 +11,7 @@ import Year from "../components/Year";
 const useStyles = makeStyles(theme => ({
   root: {
     display: 'flex',
-    width: '1300px'
+    width: '100%' // final changed that did the 4 cards per row trick 
   },
   content: {
     padding: theme.spacing(3),
