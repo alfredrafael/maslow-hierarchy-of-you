@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { makeStyles } from '@material-ui/styles';
 import { Card, CardHeader } from "@material-ui/core";
 import DeleteSharpIcon from '@material-ui/icons/DeleteSharp';
+import InfoIcon from '@material-ui/icons/Info';
+import ListIcon from '@material-ui/icons/List';
 import { connect } from "react-redux";
 import { deleteCourse } from "../actions/courseActions";
 
@@ -20,9 +22,9 @@ const useStyles = makeStyles(() => ({
     display: 'block',
     width: 4,
     opacity: 0.6,
-    '&:hover': {
-      opacity: 0.9,
-    },
+    // '&:hover': {
+    //   opacity: 0.9,
+    // },
     marginRight: 17,
   },
   // hideDelete: {
@@ -46,6 +48,10 @@ const Course = (props) => {
     dispatch(deleteCourse(yearIndex, semesterIndex, courseIndex));
   };
 
+  const sayHello = () => {
+    alert('hello');
+  };
+
   let coursePrefix = "";
   const pattern = new RegExp(/[A-Z]+ \d{4}|\d{3} Core Course/);
 
@@ -64,15 +70,31 @@ const Course = (props) => {
         <CardHeader
           title={
             <>
-              <div className={classes.highlightCourseName}>{coursePrefix}</div>
-              {courseName}
+
+              <div className={classes.highlightCourseName}> {/* Before the Task Item*/}
+                  
+              </div>
+              
+                  {courseName} {/* Main text */}
+              
+              <ListIcon // after the text
+                      style={{float: 'right' }} 
+                      fontSize={'medium'} 
+                      onClick={sayHello}
+              />
+
+              <div>{/* Under the text*/}</div>
+
+              
             </>
+
           }
-          titleTypographyProps={{ variant:'body2' }}
+          titleTypographyProps={{ variant:'body1' }}
+          
           action={
             <>
               <div className={state.isHovering ? classes.showDelete : classes.hideDelete} onClick={handleDelete}>
-                <DeleteSharpIcon fontSize={'small'} />
+                <DeleteSharpIcon fontSize={'small'} style={{marginTop: '43%'}}/>
               </div>
             </>
           }

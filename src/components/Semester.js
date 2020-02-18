@@ -4,7 +4,6 @@ import {
 //  Card,
   CardHeader,
   CardContent,
-  CardActions,
   Divider,
   RootRef
 } from '@material-ui/core';
@@ -15,7 +14,6 @@ import Card from 'react-bootstrap/Card'
 import styled from 'styled-components'
 
 
-
 const MyTest = styled.div`
   color: red;
   background: blue;
@@ -23,8 +21,8 @@ const MyTest = styled.div`
 
 const useStyles = makeStyles(() => ({
   root: {
-    width: '300px',
-    transition: 'all .25s cubic-bezier(.02, .01, .47, 1)',
+    width: '310px',
+    // transition: 'all .25s cubic-bezier(.02, .01, .47, 1)',
     // '&:hover': {
     //   boxShadow: '0 15px 15px rgba(0, 0, 0, .16)',
     //   transform: 'translate(0, -5px)',
@@ -58,6 +56,8 @@ const useStyles = makeStyles(() => ({
   },
 
 
+
+
   healthCardHeader: {
     textAlign: 'center',
     padding: 7,
@@ -69,6 +69,8 @@ const useStyles = makeStyles(() => ({
   healthCardBackground: {
     background: '#9500ff', 
   },
+
+
 
 
   workCardHeader: {
@@ -84,6 +86,8 @@ const useStyles = makeStyles(() => ({
   },
 
 
+
+
   relationshipsCardHeader: {
     textAlign: 'center',
     padding: 7,
@@ -95,6 +99,8 @@ const useStyles = makeStyles(() => ({
   relationshipsCardBackground: {
     background: 'lightgreen' 
   },
+
+
 
 
   networkingCardHeader: {
@@ -110,6 +116,9 @@ const useStyles = makeStyles(() => ({
   },
 
 
+
+
+
   projectsCardHeader: {
     textAlign: 'center',
     padding: 7,
@@ -122,6 +131,10 @@ const useStyles = makeStyles(() => ({
     background: 'moccasin' 
   },
 
+
+
+
+  
   choresCardHeader: {
     textAlign: 'center',
     padding: 7,
@@ -133,6 +146,11 @@ const useStyles = makeStyles(() => ({
   choresCardBackground: {
     background: 'lightpink' 
   },
+
+
+
+
+
   otherCardHeader: {
     textAlign: 'center',
     padding: 7,
@@ -144,8 +162,6 @@ const useStyles = makeStyles(() => ({
   otherCardBackground: {
     background: 'darkgrey' 
   },
-
-
 }));
 
 const Semester = (props) => {
@@ -157,7 +173,7 @@ console.log(props);
       className={classes.root}
     >
         <CardHeader
-            className={(semesterName === "Day's Priority") ? classes.priorityCardHeader : 
+            className={(semesterName === "Day's Priority") ? classes.priorityCardHeader :
                           (semesterName === 'Health') ? classes.healthCardHeader :
                           (semesterName === 'Work') ? classes.workCardHeader :
                           (semesterName === 'Relationships') ? classes.relationshipsCardHeader :

@@ -22,8 +22,6 @@ const CustomButton = styled.button`
   box-shadow: 0 10px 10px rgba(0, 0, 0, .08);
   cursor: pointer;
   margin-right: -4%;
-
- 
   }
 `
 
