@@ -7,6 +7,7 @@ import TextArea from "react-textarea-autosize";
 import { connect } from 'react-redux';
 import { addCourse } from "../../actions/courseActions";
 import { Button } from 'react-bootstrap';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const useStyles = makeStyles(() => ({
   root: {
@@ -118,7 +119,10 @@ const AddCourseButton = (props) => {
             onChange={handleTextChange}
             onKeyPress={handleKeyEnter}
            />
+           <FontAwesomeIcon icon="coffee" />
+
         </Card>
+        <FontAwesomeIcon icon="spinner" size="xs" />
         <Button className={classes.addCourseForm} onClick={handleAddCourseClick}>Add Item</Button>
         <Icon className={classes.closeIcon} onClick={handleOpenForm}>close</Icon>
       </>
