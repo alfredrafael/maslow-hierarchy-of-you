@@ -1,6 +1,6 @@
 {
-  "name": "the-maslow-hierarchy-of-you",
-  "homepage": "http://alfredrafael.github.io/the-maslow-hierarchy-of-you",
+  "name": "maslow-hierarchy-of-you",
+  "homepage": "http://alfredrafael.github.io/maslow-hierarchy-of-you",
   "version": "0.0.1",
   "private": true,
   "dependencies": {
