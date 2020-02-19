@@ -21,7 +21,7 @@ const MyTest = styled.div`
 
 const useStyles = makeStyles(() => ({
   root: {
-    width: '310px',
+    width: '313px',
     // transition: 'all .25s cubic-bezier(.02, .01, .47, 1)',
     // '&:hover': {
     //   boxShadow: '0 15px 15px rgba(0, 0, 0, .16)',
